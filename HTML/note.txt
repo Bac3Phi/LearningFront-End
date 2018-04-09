@@ -1,0 +1,7 @@
+<br /> tương tự dấu xuống dòng
+<hr /> giống spec 1 dòng
+&nbsp; ko ngắt dòng
+<ul> unordered list. ko thứ tự
+<ol> ordered list. có sắp xếp 
+<li> list
+
