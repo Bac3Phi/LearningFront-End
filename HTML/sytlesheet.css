@@ -2,7 +2,7 @@ p{
 	text-decoration: underline;
 	color: red;
 }
-ul li{
+.nav li{
 	display: inline;
 }
 a{
@@ -18,8 +18,151 @@ ol li:first-child{
 
 h1,h2,h3{
 	color: green;
+}	
+h1{
+	margin: 10px 0 15px 0;
 }
 h2{
-	border-bottom: 6px solid black;
-	margin-top: 20px;
+	font-size: 25px;
+	font-weight: bold;
+	margin: 10px 0 20px 0;
+	text-align: center;
+}
+h3{
+	margin: 15px 0 15px 0;
+	border-bottom: 1px solid #cccccc;
+	padding-bottom: 3px ;
+}
+ul{
+	padding: 0 0 0 50px;
+}
+ol{
+	padding: 0 0 0 50px;
+}
+.nav{
+	padding-left: 0;
+	text-align: center;
+}
+.nav a{
+	color: #0000af;
+	text-decoration: none;
+}
+.recipes{
+	list-style-type: none;
+	padding: 0;
+}
+.recipes li{
+	border: 1px solid #b56663;
+	padding-left: 15px;
+}
+.recipes h3{
+	border-bottom: 0;
+}
+.recipes a{
+	color: #7facaa;
+	text-decoration: none;
+}
+.header{
+	padding: 10px 10px 10px 10px;
+	background-color: #b56663;
+}
+.header a{
+	color: #ffffff;
+}
+.header h1{
+	text-align: center;
+	color: #ffffff;
+}
+.main-content{
+	width: 500px;
+	padding: 20px;
+	border: 1px solid #dddddd;
+	margin: 30px auto 0 auto;
+}
+.photos{
+	list-style-type: none;
+	padding: 0;
+}
+.photos li{
+	display: inline;
+	padding-left: 11px;
+}
+.photos img{
+	width: 150px;
+	height: auto;
+}
+body{
+	background: #5f5f5f url(Images/background.jpg) top left repeat;
+	font-family: sans-serif;
+}
+.main-content{
+	background: #ffffff url(Images/stardust.png) top left repeat;
+}
+.recipes li{
+	background-color: #ffffff;
+}
+.featured-image{
+	width: 500px;
+	height: 200px;
+	background: #ffffff url(Images/featured-cake.jpeg) top left no-repeat;
+}
+.featured-image h3{
+	margin: 0;
+	background-color: #333333;
+	color: #ffffff;
+	padding: 5px 0 5px 15px;
+	text-transform: uppercase;
+}
+.recipes img{
+	float: left;
+	padding-right: 10px;
+	width: 120px;
+	height: auto;
+}
+.recipes div{
+	display: inline;
+}
+
+.footer p{
+	color: #aaaaaa;
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+	font-style: italic;
+	text-transform: uppercase;
+}
+.footer{
+	border: 2px solid #ffffff;
+	margin: 0;
+	background-color: #333333;
+	color: #ffffff;
+}
+label,input{
+	display: block;
+}
+label{
+	margin-bottom: 10px;
+}
+input{
+	width: 200px;
+	margin-bottom: 25px;
+}
+textarea{
+	width: auto;
+	height: 400px;
+	padding: 7px;
+	border: 2px solid #7facaa;
+	margin-bottom: 25px;
+	font-size: 24px;
+}
+input[type=submit]{
+	width: 120px;
+}
+input[type=text]{
+	border: 2px solid #7facaa;
+	font-size: 20px;
+	padding: 5px;
+}
+input[type=checkbox], label[for=newsletter] {
+	display: inline;
 }
