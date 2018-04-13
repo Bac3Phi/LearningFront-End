@@ -3,44 +3,109 @@
 <head>
 	<title>Calculator</title>
 	<link rel="stylesheet" href="style.css">
+	
 	<script language="javascript" type="text/javascript" src="function.js"></script>
 </head>
 <body>
-<div class="box">
-    <div class="display"><input type="text" readonly size="11" id="d"></div>
-    <div class="keys">
-        <p>
-        <input type="button" class="button gray" value="CE" onclick='c("not defined ")'>
-        <input type="button" class="button gray" value="(" onclick='math("(")'>
-        <input type="button" class="button gray" value=")" onclick='math(")")'>
-        <input type="button" class="button pink" value="/" onclick='math("/")'>
-        </p>
-        <p>
-        <input type="button" class="button red" value="7" onclick='math("7")'>
-        <input type="button" class="button red" value="8" onclick='math("8")'>
-        <input type="button" class="button red" value="9" onclick='math("9")'>
-        <input type="button" class="button pink" value="*" onclick='math("*")'>
-        </p>
-        <p>
-        <input type="button" class="button red" value="4" onclick='math("4")'>
-        <input type="button" class="button red" value="5" onclick='math("5")'>
-        <input type="button" class="button red" value="6" onclick='math("6")'>
-        <input type="button" class="button pink" value="-" onclick='math("-")'>
-        </p>
-        <p>
-        <input type="button" class="button red" value="1" onclick='math("1")'>
-        <input type="button" class="button red" value="2" onclick='math("2")'>
-        <input type="button" class="button red" value="3" onclick='math("3")'>
-        <input type="button" class="button pink" value="+" onclick='math("+")'>
-        </p>
-        <p>
-        <input type="button" class="button red" value="0" onclick='math("0")'>
-        <input type="button" class="button red" value="." onclick='math(".")'>
-        <input type="button" class="button red" value="C" onclick='c("")'>
-        <input type="button" class="button orange" value="=" onclick='e()'>
-        </p>
-    </div>
-</div>
+	<div class="box">
+		<script type="text/javascript">
+			var getOperator;
+			var firstNumber;
+			var secondNumber;
+			function numberClicked(number){
+				var value = document.getElementById('output').value ;
+				if (value !=0 ) {
+					document.getElementById('output').value += number;
+				}
+				else {
+					document.getElementById('output').value = number;
+				}
+			}
+
+			function clr(){
+				document.getElementById('output').value = "";
+				return;
+			}
+
+			
+			function operatorClicked(operator){
+				firstNumber = parseFloat(document.getElementById('output').value);
+				document.getElementById('output').value= "";
+				switch(operator){
+					case "+":	
+					getOperator = "+";
+					break;
+					case "-":
+					getOperator = "-";
+					break;
+					case "*":
+					getOperator = "*";
+					break;
+					case "/":
+					getOperator = "/";
+					break;
+				}
+			}
+			
+			function equalResult(){
+				var result= 0;
+				secondNumber = parseFloat(document.getElementById('output').value);
+				if (getOperator== "+"){
+					result = firstNumber + secondNumber;
+				}
+				else if (getOperator== "-"){
+					result = firstNumber - secondNumber;
+				}
+				else if (getOperator== "*"){
+					result = firstNumber * secondNumber;
+				}
+				else if (getOperator== "/"){
+					result = firstNumber / secondNumber;
+				}
+
+				
+				document.getElementById('output').value = result;
+			}
+
+
+			
+		</script>
+		<div class="display">
+			<form><input type="text" readonly="true" size="11" id="output"></form>
+		</div>
+		<div class="keys">
+			<p>
+				<input type="button" class="button gray" value="CE" onclick="clr()">
+				<input type="button" class="button pink" value="(" onclick="numberClicked('(')" >
+				<input type="button" class="button pink" value=")" onclick="numberClicked(')')" >
+				<input type="button" class="button pink" value="/" onclick="operatorClicked('/')">
+			</p>
+			<p>
+				<input type="button" class="button red" value="7" onclick="numberClicked(7)">
+				<input type="button" class="button red" value="8" onclick="numberClicked(8)">
+				<input type="button" class="button red" value="9" onclick="numberClicked(9)">
+				<input type="button" class="button pink" value="*" onclick="operatorClicked('*')">
+			</p>
+			<p>
+				<input type="button" class="button red" value="4" onclick="numberClicked(4)">
+				<input type="button" class="button red" value="5" onclick="numberClicked(5)">
+				<input type="button" class="button red" value="6" onclick="numberClicked(6)">
+				<input type="button" class="button pink" value="-" onclick="operatorClicked('-')">
+			</p>
+			<p>
+				<input type="button" class="button red" value="1" onclick="numberClicked(1)">
+				<input type="button" class="button red" value="2" onclick="numberClicked(2)">
+				<input type="button" class="button red" value="3" onclick="numberClicked(3)">
+				<input type="button" class="button pink" value="+" onclick="operatorClicked('+')">
+			</p>
+			<p>
+				<input type="button" class="button red" value="0" onclick="numberClicked(0)">
+				<input type="button" class="button red" value="." onclick="numberClicked('.')">
+				<input type="button" class="button red" value="C" onclick="clr()" >
+				<input type="button" class="button orange" value="=" onclick="equalResult()">
+			</p>
+		</div>
+	</div>
 
 </body>
 </html>

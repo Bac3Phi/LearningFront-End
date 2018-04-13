@@ -21,19 +21,21 @@ body
     top:20px;
     height:40px;
 }
+
 .display input
 {
 
 
-     position:relative;
-    left:2px;
-    top:2px;
-    height:35px;
-    color:black;
-    background-color:#bccd95;
-    font-size:21px;
-    text-align:right;
+   position:relative;
+   left:2px;
+   top:2px;
+   height:35px;
+   color:black;
+   background-color:#bccd95;
+   font-size:21px;
+   text-align:right;
 }
+
 .keys
 {
     position:relative;
@@ -65,16 +67,16 @@ body
 .button.red
 {
     color:red;
-    background-color:303030;
+    background-color: #303030;
     border-bottom:black 2px solid;
-    border-top:2px 303030 solid;
+    border-top:2px #303030 solid;
 }
 .button.orange
 {
     color:black;
-    background-color:FF9933;
+    background-color: #FF9933;
     border-bottom:black 2px solid;
-    border-top:2px FF9933 solid;
+    border-top:2px #FF9933 solid;
 }
 .gray:active
 {
@@ -90,13 +92,13 @@ body
 {
 
 
-     border-top:black 2px solid;
-    border-bottom:#303030 2px solid;
+   border-top:black 2px solid;
+   border-bottom:#303030 2px solid;
 }
 .orange:active
 {
     border-top:black 2px solid;
-    border-bottom:FF9933 2px solid;
+    border-bottom:#FF9933 2px solid;
 }
 p
 {

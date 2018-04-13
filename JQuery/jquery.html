@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello JQuery</title>
+	<!--Import JQuery.js
+	<script type="text/javascript" src="jquery-3.3.1.min.js" </script> > -->
+		
+		<!--Import JQuery CDN-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+		</script>
+		<script>
+			$(document).ready(function(){
+			$("button").click(function(){ // emelent selector
+				$("#phi").hide(100); // #id selector //hide(speed,callback)
+				$('.class').hide(); // .class selector
+			});
+
+			$("#phi").dblclick(function(){
+				$(this).hide();
+
+			});
+			$("#show").click(function(){
+				var div = $("div");
+				div.animate({height: '300px', opacity: '0.4'}, "slow");
+				div.animate({width: '300px', opacity: '0.8'}, "slow");
+				div.animate({height: '100px', opacity: '0.4'}, "slow");
+				div.animate({width: '100px', opacity: '0.8'}, "slow");
+				div.animate({fontSize: '+=3em'},"slow");
+			});
+			$("input").blur(function(){
+				$(this).css("background-color","#CCCCCC")
+			});
+			$("input").blur(function(){
+				$(this).css("background-color","#FFFFFF")
+			});
+			$("#toggle").click(function(){
+				$("#div1").fadeToggle();
+				$("#div2").fadeToggle("slow");
+				$("#div3").fadeToggle(3000);
+
+			});
+			$("#getHTMl").click(function(){
+				$("#test").val("Phi PHI ");
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		function appendText() {
+		    var txt1 = "<p>Text.</p>";              // Create text with HTML
+		    var txt2 = $("<p></p>").text("Text.");  // Create text with jQuery
+		    var txt3 = document.createElement("p");
+		    txt3.innerHTML = "Text.";               // Create text with DOM
+		    $("body").append(txt1, txt2, txt3);     // Append new elements
+		}
+	</script>
+</head>
+<body>
+	<p>Phi Pham</p>
+	<p id="phi"><b>Phi Poz</b></p>
+	<p class ="class"> Class for CSS</p>
+
+	<p>Name: <input type="text" id="test" value="Mickey Mouse"></p>
+
+	<button>Click me</button>
+	<button id="show">Testing show</button><br>
+	<button id="toggle">Toggle</button>
+	<button id="getHTMl">HTML</button>
+	<button onclick="appendText()">Append text</button>
+	<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+	<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+	<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+	<div style="background:#98bf21;height:100px;width:100px;position:absolute;">HELLO</div>
+
+	
+</body>
+</html>
