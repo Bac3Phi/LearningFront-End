@@ -1,0 +1,32 @@
+.container{
+	max-width: 1000px;
+}
+.box{
+	border: 1px red dotted;
+}
+.profile {
+	margin-right: 48px;
+}
+.img-circle{
+	max-width: 150px;
+	height: auto;
+}
+.profile aside ul li img{
+	max-width: 30px;
+	height: auto;
+}
+.profile aside ul li{
+	float:left;
+	margin-right: 3px;
+}
+.profile aside ul{
+	list-style: none;
+	padding: 0;
+}
+.logo{
+	max-width: 100px;
+	height: auto;
+}
+h4{
+	font-weight: bold;
+}
