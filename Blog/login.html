@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login FiFi Blog</title>
+	<title>FiFi's Blog</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -15,25 +15,39 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>  
 	<link rel="stylesheet" type="text/css" href="css/login.css">
+
 </head>
 <body>
-	<div class="container">
+  <script type="text/javascript">
+    function checkLogin() {
+      var form = document.getElementsByClassName("form-signin")
+      var email = document.getElementById("id-email").value;
+      var password = document.getElementById("id-password").value;
+      if (email=="gkz@gmail.com" && password=="123456" ) {
+        alert("Sign In Succesful")
+       window.location ="post.html"
+      }
+       
+    }
+  </script>
+	
+  <div class="container">
 		<form class="form-signin">
 			<h1 class="text-center">Sign In</h1>
 			<p>
 				<label class="sr-only">Email address: </label>
-				<input type="email" placeholder="Email address" class="form-control" required autofocus="true">
+				<input type="email" placeholder="Email address" class="form-control" id="id-email" required autofocus="true">
 			</p>
 
 			<p>
 				<label class="sr-only">Password: </label>
-				<input type="password" placeholder="Password" class="form-control" required autofocus="true">
+				<input type="password" placeholder="Password" class="form-control" id="id-password" required>
 			</p>
 			<p class ="checkbox">
 			<label><input type="checkbox"> Remember me</label>
 			</p>
 
-			<button type="submit" class="btn btn-primary btn-block">Sign in</button>
+			<button type="button" class="btn btn-primary btn-block" onclick="checkLogin()">Sign in</button>
 		</form>
 	</div>
 </body>
