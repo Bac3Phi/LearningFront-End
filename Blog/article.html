@@ -17,33 +17,11 @@
   <link rel="stylesheet" type="text/css" href="css/default.css">
   <link rel="stylesheet" type="text/css" href="css/post.css">
   <link rel="stylesheet" type="text/css" href="css/article.css">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="article.js"></script>
 </head>
 <body>
-  <script type="text/javascript">
-    function sendMessage(){
-      var form = document.getElementsByClassName("form-control")
-      var currentDate = new Date();
-      var message = form[0].value
-
-      var fullName = form[1].value
-
-      var email = form[2].value
-
-      var comments = document.getElementById('comments')
-      var numberOfComments = comments.children.length - 1
-
-      var comment = document.createElement('div')
-      comment.className = 'row'
-      comment.innerHTML = `<div class="col-md-11"><p>${message}</p><footer><small><b>${fullName}</b> <i> (${email}) </i>at ${currentDate.toLocaleString('en-US', {hour12: true })} </small></footer><hr></div><div class="col-md-1 comment-num">${numberOfComments}</div>`
-      comments.insertBefore(comment, comments.children[comments.children.length-1])
-      //alert("Your comments sent successfull!");
-      var article = document.getElementById('alert')
-      
-      article.innerHTML=`<div class="alert alert-success alert-dismissible"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> <strong>Success!</strong> Indicates a successful or positive action.</div>`; 
-      }
-
-  </script>
+ 
 
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -75,21 +53,23 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-3 profile  ">
+      <div class="col-md-4 profile box col-sm-12 col-xs-12 profile-content">
         <aside>
-          <img src="img/cumeo.jpg" alt="cumeo image" class="img-circle">
-          <h4>Pham Nhat Phi</h4>
-          <p>Ruby Internship @NEOLAB</p>
-          <hr>
-          <p>Share this page:</p> 
-          <ul class="clearfix">
-           <li><img src="img/fb.png" alt="facebook"></li>
-           <li><img src="img/is.png" alt="istagram"></li>
-           <li><img src="img/tw.png" alt="twitter"></li>
-         </ul>
+          <div>
+            <img src="img/cumeo.jpg" alt="cumeo image" class="img-circle profile-image">
+            <h4>Pham Nhat Phi</h4>
+            <p>Ruby Internship @NEOLAB</p>
+            <hr class="hidden-sm hidden-xs">
+            <p>Share this page:</p> 
+            <ul class="clearfix">
+             <li><img src="img/fb.png" alt="facebook"></li>
+             <li><img src="img/is.png" alt="istagram"></li>
+             <li><img src="img/tw.png" alt="twitter"></li>
+           </ul>
+         </div>
        </aside>
      </div>
-     <div class="col-md-8 ">
+     <div class="col-md-8 box">
 
       <article class="header">
         <div id="alert"></div>
