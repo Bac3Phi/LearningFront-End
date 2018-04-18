@@ -5,20 +5,21 @@
 	border: 1px red dotted;
 }
 .profile {
+
 }
 .img-circle{
 	max-width: 150px;
 	height: auto;
 }
-.profile aside ul li img{
+.profile ul li img{
 	max-width: 30px;
 	height: auto;
 }
-.profile aside ul li{
+.profile  ul li{
 	float:left;
 	margin-right: 3px;
 }
-.profile aside ul{
+.profile ul{
 	list-style: none;
 	padding: 0;
 }
@@ -31,21 +32,35 @@ h4{
 }
 
 @media (max-width: 992px){
-	.profile-image{
-		float:left;
-	}
 	.profile-content{
-		float:left;
+		float: left;
 	}
 }
+/*.relative{
+	position: relative;
+}*/
 @media (min-width: 485px) and (max-width: 992px){
-	.profile-image{
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.profile-content{
-		display: table;
-		margin:auto;
+	.profile-centered{
+		display: -ms-flexbox;
+		display: -webkit-box;
+		display: flex;
+		-ms-flex-align: center;
+		-ms-flex-pack: center;
+		-webkit-box-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		justify-content: center;
 	}
 }
+@media (max-width: 485px){
+	.profile-centered{
+		display: -ms-flexbox;
+		display: -webkit-box;
+		display: flex;
+		-ms-flex-align: center;
+		-ms-flex-pack: center;
+		-webkit-box-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		justify-content: center;
+	}}
