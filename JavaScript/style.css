@@ -24,16 +24,15 @@ body
 
 .display input
 {
-
-
-   position:relative;
-   left:2px;
-   top:2px;
-   height:35px;
-   color:black;
-   background-color:#bccd95;
-   font-size:21px;
-   text-align:right;
+    width: 218px;
+    position:relative;
+    left:2px;
+    top:2px;
+    height:35px;
+    color:black;
+    background-color:#bccd95;
+    font-size:21px;
+    text-align:right;
 }
 
 .keys
@@ -92,8 +91,8 @@ body
 {
 
 
-   border-top:black 2px solid;
-   border-bottom:#303030 2px solid;
+ border-top:black 2px solid;
+ border-bottom:#303030 2px solid;
 }
 .orange:active
 {

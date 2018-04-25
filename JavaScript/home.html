@@ -43,69 +43,84 @@
 					break;
 					case "/":
 					getOperator = "/";
-					break;
-				}
-			}
-			
-			function equalResult(){
-				var result= 0;
-				secondNumber = parseFloat(document.getElementById('output').value);
-				if (getOperator== "+"){
-					result = firstNumber + secondNumber;
-				}
-				else if (getOperator== "-"){
-					result = firstNumber - secondNumber;
-				}
-				else if (getOperator== "*"){
-					result = firstNumber * secondNumber;
-				}
-				else if (getOperator== "/"){
-					result = firstNumber / secondNumber;
-				}
+          case "^":
+          getOperator= "^";
+          break;
+          
+        }
+      }
 
-				
-				document.getElementById('output').value = result;
-			}
+      function equalResult(){
+        var result= 0;
+        secondNumber = parseFloat(document.getElementById('output').value);
+        if (getOperator== "+"){
+         result = firstNumber + secondNumber;
+       }
+       else if (getOperator== "-"){
+         result = firstNumber - secondNumber;
+       }
+       else if (getOperator== "*"){
+         result = firstNumber * secondNumber;
+       }
+       else if (getOperator== "/"){
+         result = firstNumber / secondNumber;
+       }
+       else if (getOperator=="^"){
+        result = Math.pow(firstNumber,secondNumber);
+       }
+     
 
 
-			
-		</script>
-		<div class="display">
-			<form><input type="text" readonly="true" size="11" id="output"></form>
-		</div>
-		<div class="keys">
-			<p>
-				<input type="button" class="button gray" value="CE" onclick="clr()">
-				<input type="button" class="button pink" value="(" onclick="numberClicked('(')" >
-				<input type="button" class="button pink" value=")" onclick="numberClicked(')')" >
-				<input type="button" class="button pink" value="/" onclick="operatorClicked('/')">
-			</p>
-			<p>
-				<input type="button" class="button red" value="7" onclick="numberClicked(7)">
-				<input type="button" class="button red" value="8" onclick="numberClicked(8)">
-				<input type="button" class="button red" value="9" onclick="numberClicked(9)">
-				<input type="button" class="button pink" value="*" onclick="operatorClicked('*')">
-			</p>
-			<p>
-				<input type="button" class="button red" value="4" onclick="numberClicked(4)">
-				<input type="button" class="button red" value="5" onclick="numberClicked(5)">
-				<input type="button" class="button red" value="6" onclick="numberClicked(6)">
-				<input type="button" class="button pink" value="-" onclick="operatorClicked('-')">
-			</p>
-			<p>
-				<input type="button" class="button red" value="1" onclick="numberClicked(1)">
-				<input type="button" class="button red" value="2" onclick="numberClicked(2)">
-				<input type="button" class="button red" value="3" onclick="numberClicked(3)">
-				<input type="button" class="button pink" value="+" onclick="operatorClicked('+')">
-			</p>
-			<p>
-				<input type="button" class="button red" value="0" onclick="numberClicked(0)">
-				<input type="button" class="button red" value="." onclick="numberClicked('.')">
-				<input type="button" class="button red" value="C" onclick="clr()" >
-				<input type="button" class="button orange" value="=" onclick="equalResult()">
-			</p>
-		</div>
-	</div>
+      document.getElementById('output').value = result;
+    }
+    function sqrtClicked(){
+      firstNumber = parseFloat(document.getElementById('output').value);
+      if (firstNumber == "") {
+        firstNumber =0;
+      }
+      var result = Math.sqrt(firstNumber);
+
+      document.getElementById('output').value = result;
+    }
+
+
+  </script>
+  <div class="display">
+   <form><input type="text" readonly="true" size="11" id="output"></form>
+ </div>
+ <div class="keys">
+   <p>
+    <input type="button" class="button gray" value="CE" onclick="clr()">
+    <input type="button" class="button pink" value="^" onclick="operatorClicked('^')" >
+    <input type="button" class="button pink" value="sqrt" onclick="sqrtClicked()" >
+    <input type="button" class="button pink" value="/" onclick="operatorClicked('/')">
+  </p>
+  <p>
+    <input type="button" class="button red" value="7" onclick="numberClicked(7)">
+    <input type="button" class="button red" value="8" onclick="numberClicked(8)">
+    <input type="button" class="button red" value="9" onclick="numberClicked(9)">
+    <input type="button" class="button pink" value="*" onclick="operatorClicked('*')">
+  </p>
+  <p>
+    <input type="button" class="button red" value="4" onclick="numberClicked(4)">
+    <input type="button" class="button red" value="5" onclick="numberClicked(5)">
+    <input type="button" class="button red" value="6" onclick="numberClicked(6)">
+    <input type="button" class="button pink" value="-" onclick="operatorClicked('-')">
+  </p>
+  <p>
+    <input type="button" class="button red" value="1" onclick="numberClicked(1)">
+    <input type="button" class="button red" value="2" onclick="numberClicked(2)">
+    <input type="button" class="button red" value="3" onclick="numberClicked(3)">
+    <input type="button" class="button pink" value="+" onclick="operatorClicked('+')">
+  </p>
+  <p>
+    <input type="button" class="button red" value="0" onclick="numberClicked(0)">
+    <input type="button" class="button red" value="." onclick="numberClicked('.')">
+    <input type="button" class="button red" value="C" onclick="clr()" >
+    <input type="button" class="button orange" value="=" onclick="equalResult()">
+  </p>
+</div>
+</div>
 
 </body>
 </html>
