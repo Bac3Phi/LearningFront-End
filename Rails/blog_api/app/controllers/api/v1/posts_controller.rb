@@ -19,11 +19,11 @@ module Api::V1
     @post = Post.new(post_params)
 
     if @post.save
-      render json: @post, status: :created, location: @post
+      render json: @post, status: :created, location: api_v1_post_url(@post)
     else
       render json: @post.errors, status: :unprocessable_entity
     end
-  end
+  end 
 
   # PATCH/PUT /posts/1
   def update

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'welcome/show'
+  resources :users
+  resources :carts
+  get 'welcome/index'
   resources :posts
 	root to: 'pages#welcome'
 	get '/contact' => 'pages#contact'
